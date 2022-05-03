@@ -4,24 +4,23 @@ header {
     align-items: center;
     width: 100%;
     background: rgba(255, 0, 0, 0.5);
-  }
-  
-  .appLogo {
+}
+
+.appLogo {
     width: 5rem;
     padding: 10px;
-  }
-  
-  header ul {
+}
+
+header ul {
     list-style: none;
     margin-right: 2.5rem;
     font-weight: bold;
     font-size: 1.5rem;
     display: flex;
     gap: 10px;
-  }
-  
-  a {
+}
+
+a {
     color: inherit;
     text-decoration: none;
-  }
-  
+}

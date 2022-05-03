@@ -1,23 +1,23 @@
 import { useEffect, useState } from 'react';
-import CharacterList from '../components/CharacterList';
-import { fetchMGSCharacters } from '../services/mgs';
+import TeamList from '../components/TeamList';
+import { fetchNBATeams } from '../services/nba';
 
 export default function Home() {
-  const [mgsCharacters, setMGSCharacters] = useState(() => {
-    const defaultCharacters = localStorage.getItem('characters');
-    if (defaultCharacters) return JSON.parse(defaultCharacters);
+  const [nbaTeams, setNBATeams] = useState(() => {
+    const defaultTeams = localStorage.getItem('teams');
+    if (defaultTeams) return JSON.parse(defaultTeams);
     return [];
   });
 
   useEffect(() => {
-    if (mgsCharacters.length > 0) return;
-    async function fetchCharacters() {
-      const fetchedCharacters = await fetchMGSCharacters();
-      setMGSCharacters(fetchedCharacters);
+    if (nbaTeams.length > 0) return;
+    async function fetchTeams() {
+      const fetchedTeams = await fetchNBATeams();
+      setNBATeams(fetchedTeams);
     }
 
-    fetchCharacters();
-  }, [mgsCharacters.length]);
+    fetchTeams();
+  }, [nbaTeams.length]);
 
-  return <CharacterList characters={mgsCharacters} />;
+  return <TeamList teams={nbaTeams} />;
 }

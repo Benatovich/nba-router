@@ -1,4 +1,4 @@
-// const mgsPics = [
+// const nbaPics = [
 //     {
 //       name: 'ATL',
 //       detailUrl:
@@ -150,5 +150,5 @@
 //     },
 //   ];
   
-//   export default mgsPics;
+//   export default nbaPics;
   

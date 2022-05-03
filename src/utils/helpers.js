@@ -5,8 +5,8 @@
 //   nbaTeam.image = logo?.teamLogo;
 // };
 
-// export const getPic = (characterId) => {
-//     const picUrl = await fetch(`https://www.giantbomb.com/api/character/3005-${characterId}/?api_key=${API_KEY}&field_list=image`)
+// export const getPic = (teamId) => {
+//     const picUrl = await fetch(`https://www.giantbomb.com/api/team/3005-${teamId}/?api_key=${API_KEY}&field_list=image`)
 //     const 
 
 // }
