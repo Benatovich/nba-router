@@ -1,0 +1,17 @@
+.characterContainer {
+    padding: 10px;
+    height: 300px;
+}
+
+.characterContainer:hover {
+    cursor: pointer;
+    border: 1px dashed crimson;
+    transform: scale(1.1);
+    transition: all 0.3s;
+}
+
+.characterLogo {
+    width: 100%;
+    object-fit: contain;
+    height: 100%;
+}

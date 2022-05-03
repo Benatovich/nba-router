@@ -7,7 +7,7 @@ import {
 import Layout from './views/Layout'
 import Home from './views/Home'
 import CharacterDetail from './views/CharacterDetail'
-import Game from './views/Game'
+// import Game from './views/Game'
 
 export default function App() {
   return (
@@ -20,9 +20,9 @@ export default function App() {
           <Route path="/character/:characterId">
             <CharacterDetail />
           </Route>
-          <Route path="/Game">
+          {/* <Route path="/Game">
             <Game />
-          </Route>
+          </Route> */}
         </Switch>
       </Layout>
     </Router>

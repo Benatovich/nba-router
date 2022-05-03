@@ -3,8 +3,14 @@ import { getPic } from '../utils/helpers';
 const API_KEY = process.env.REACT_APP_API_KEY;
 
 export const fetchMGSCharacters = async () => {
-  const response = await fetch(`https://www.giantbomb.com/api/franchise/3025-5/?api_key=${API_KEY}&field_list=characters`);
+  const response = await fetch(`http://www.giantbomb.com/api/franchise/3025-5/?api_key=${API_KEY}&field_list=characters`);
+  // const response = await fetch(`https://www.giantbomb.com/api/franchise/3025-5/?api_key=${API_KEY}&field_list=characters`, {
+  //   headers:
+  //     Access-Control-Allow-Origin: https://amazing.site
+  // });
+  
   const apiResults = await response.json();
+  console.log('!!apiresults', apiResults);
 
   apiResults.forEach(getPic);
   window.localStorage.setItem('characters', JSON.stringify(apiResults));

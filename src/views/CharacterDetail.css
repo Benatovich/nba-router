@@ -1,0 +1,41 @@
+.teamDetailsContainer {
+    padding-bottom: 5px;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .teamDetailsList {
+    display: flex;
+    margin-top: 5px;
+    padding-bottom: 5px;
+    justify-content: center;
+    gap: 75px;
+  }
+  
+  img {
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    padding-right: 5px;
+    height: 200px;
+  }
+  
+  .content {
+    text-align: center;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 100%;
+    font-size: 2.5rem;
+    padding: 5px;
+  }
+  
+  h1 {
+    padding-bottom: 15;
+    margin-top: 1rem;
+    text-align: center;
+    font-weight: bold;
+    font-size: 2.5rem;
+  }
+  
