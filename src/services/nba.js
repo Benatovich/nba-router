@@ -1,10 +1,10 @@
 import { getLogo } from '../utils/helpers';
 
-const API_KEY = process.env.REACT_APP_NBA_KEY;
+const API_KEY = process.env.API_KEY;
 
 export const fetchNBATeams = async () => {
   const response = await fetch(
-    'https://api-nba-v1.p.rapidapi.com/teams/league/standard',
+    'https://api-nba-v1.p.rapidapi.com/teams/',
     {
       headers: {
         'x-rapidapi-key': API_KEY,
@@ -13,13 +13,15 @@ export const fetchNBATeams = async () => {
     }
   );
   const apiResults = await response.json();
-  const teamList = apiResults.api.teams.filter(
-    (team) => team.nbaFranchise === '1' && team.allStar === '0'
-  );
 
-  teamList.forEach(getLogo);
-  window.localStorage.setItem('teams', JSON.stringify(teamList));
-  return teamList;
+  console.log('!apiresults', apiResults)
+  // const teamList = apiResults.api.teams.filter(
+  //   (team) => team.nbaFranchise === '1' && team.allStar === '0'
+  // );
+
+  apiResults.response.forEach(getLogo);
+  window.localStorage.setItem('teams', JSON.stringify(apiResults.response));
+  return apiResults.response;
 };
 
 export const fetchNBAPlayers = () => {};

@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { useParams, useLocation, Redirect, Link } from 'react-router-dom';
+import { useParams, Redirect, Link } from 'react-router-dom';
 import { fetchTeamDetails } from '../services/nba';
 import styles from './TeamDetail.css';
 
@@ -23,19 +23,20 @@ export default function TeamDetail() {
   }, []);
 
   const { teamDetailsList, teamDetailsContainer, content } = styles;
-  const { image, name, description, firstAppearance, voice } = teamDetails;
+  const { logo, nickname, shortName, fullName, leagues } = teamDetails;
 
   return (
     <div className={teamDetailsContainer}>
       <div className={teamDetailsList}>
         <Link to="/">
-          <img src={image} alt={`${name} image`} />
+          <img src={logo} alt={`${nickname} Logo`} />
         </Link>
         <div className={content}>
-          <h1>{name}</h1>
-          <p>{description}</p>
-          <p>{voice}</p>
-          <p>{firstAppearance}</p>
+          <h1>{fullName}</h1>
+          <p>Conference: {leagues?.standard?.confName}</p>
+          <p>Division: {leagues?.standard?.divName}</p>
+          <p>{nickname}</p>
+          <p>{shortName}</p>
         </div>
       </div>
     </div>
