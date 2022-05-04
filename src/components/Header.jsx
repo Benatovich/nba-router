@@ -5,7 +5,7 @@ import logo from '../assets/mgs.png';
 const Header = () => {
   return (
     <header>
-      <img src={logo} className={styles.appLogo} alt="mgs logo" />
+      <img src={logo} className={styles.appLogo} alt="nba logo" />
       <ul>
         <li>
           <NavLink

@@ -6,8 +6,8 @@ import {
 // import './App.css'
 import Layout from './views/Layout'
 import Home from './views/Home'
-import CharacterDetail from './views/CharacterDetail'
-// import Game from './views/Game'
+import TeamDetail from './views/TeamDetail'
+import Conference from './views/Conference'
 
 export default function App() {
   return (
@@ -17,12 +17,12 @@ export default function App() {
           <Route exact path="/">
             <Home />
           </Route>
-          <Route path="/character/:characterId">
-            <CharacterDetail />
+          <Route path="/team/:teamId">
+            <TeamDetail />
           </Route>
-          {/* <Route path="/Game">
-            <Game />
-          </Route> */}
+          <Route path="/conference">
+            <Conference />
+          </Route>
         </Switch>
       </Layout>
     </Router>
