@@ -1,5 +1,3 @@
-import { getLogo } from '../utils/helpers';
-
 const API_KEY = process.env.API_KEY;
 
 export const fetchNBATeams = async () => {

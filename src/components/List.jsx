@@ -1,5 +1,5 @@
-import Team from './Team';
-import styles from './TeamList.css';
+import Team from './Character';
+import styles from './List.css';
 
 const { teamList, teamDisplay } = styles;
 

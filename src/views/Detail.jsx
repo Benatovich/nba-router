@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useParams, Redirect, Link } from 'react-router-dom';
-import { fetchTeamDetails } from '../services/nba';
-import styles from './TeamDetail.css';
+import { fetchTeamDetails } from '../services/rickAndMorty';
+import styles from './Detail.css';
 
 export default function TeamDetail() {
   const [teamDetails, setTeamDetails] = useState({});

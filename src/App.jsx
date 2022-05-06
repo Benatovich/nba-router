@@ -6,7 +6,7 @@ import {
 // import './App.css'
 import Layout from './views/Layout'
 import Home from './views/Home'
-import TeamDetail from './views/TeamDetail'
+import TeamDetail from './views/Detail'
 import Conference from './views/Conference'
 
 export default function App() {
@@ -19,9 +19,6 @@ export default function App() {
           </Route>
           <Route path="/team/:teamId">
             <TeamDetail />
-          </Route>
-          <Route path="/conference">
-            <Conference />
           </Route>
         </Switch>
       </Layout>

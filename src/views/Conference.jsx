@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';
-import { fetchConferenceTeams } from '../services/nba';
-import TeamList from '../components/TeamList';
+import { fetchConferenceTeams } from '../services/rickAndMorty';
+import TeamList from '../components/List';
 import { useHistory } from 'react-router-dom';
 
 export default function Conference() {

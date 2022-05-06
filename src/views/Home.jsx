@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
-import TeamList from '../components/TeamList';
-import { fetchNBATeams } from '../services/nba';
+import TeamList from '../components/List';
+import { fetchNBATeams } from '../services/rickAndMorty';
 
 export default function Home() {
   const [nbaTeams, setNBATeams] = useState(() => {

@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import styles from './Team.css';
+import styles from './Character.css';
 
 const { teamContainer, teamLogo } = styles;
 export default function Team({ team }) {
