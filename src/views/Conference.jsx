@@ -1,11 +1,11 @@
 import { useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';
-import { fetchConferenceTeams } from '../services/rickAndMorty';
-import TeamList from '../components/List';
+import { fetchConference????s } from '../services/rickAndMorty';
+import ????List from '../components/List';
 import { useHistory } from 'react-router-dom';
 
 export default function Conference() {
-  const [teamsList, setTeamsList] = useState([]);
+  const [????sList, set????sList] = useState([]);
   const history = useHistory();
   const location = useLocation();
   const search = location.search;
@@ -13,12 +13,12 @@ export default function Conference() {
   const conference = searchedConference.get('conference');
 
   useEffect(() => {
-    async function getConferenceTeams() {
-      const conferenceTeams = await fetchConferenceTeams(conference);
-      setTeamsList(conferenceTeams);
+    async function getConference????s() {
+      const conference????s = await fetchConference????s(conference);
+      set????sList(conference????s);
     }
 
-    getConferenceTeams();
+    getConference????s();
   }, [conference]);
 
   function returnToDashBoard() {
@@ -27,8 +27,8 @@ export default function Conference() {
 
   return (
     <div>
-      <h1>{`${conference}ern conference teams`}</h1>
-      <TeamList teams={teamsList} />
+      <h1>{`${conference}ern conference ????s`}</h1>
+      <????List ????s={????sList} />
       <div
         style={{
           width: '100%',
@@ -43,7 +43,7 @@ export default function Conference() {
           }}
         >
           {' '}
-          &larr; Back to All Teams
+          &larr; Back to All ????s
         </button>
       </div>
     </div>

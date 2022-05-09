@@ -1,24 +1,26 @@
 import {
-  // Link, Redirect,
+  Link, Redirect,
   BrowserRouter as Router,
   Route, Switch
 } from 'react-router-dom'
 // import './App.css'
 import Layout from './views/Layout'
 import Home from './views/Home'
-import TeamDetail from './views/Detail'
-import Conference from './views/Conference'
+import Details from './views/Details'
 
 export default function App() {
   return (
     <Router>
       <Layout>
         <Switch>
-          <Route exact path="/">
+          <Route path="/characters/:id">
+            <Details />
+          </Route>
+          <Route path="/characters">
             <Home />
           </Route>
-          <Route path="/team/:teamId">
-            <TeamDetail />
+          <Route path="/">
+            <Redirect to='/characters' />
           </Route>
         </Switch>
       </Layout>
